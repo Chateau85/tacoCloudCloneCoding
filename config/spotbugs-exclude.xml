@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+	<Match>
+		<Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2" />
+		<Class name="tacos.Taco" />
+	</Match>
+	<Match>
+		<Bug pattern="EI_EXPOSE_REP,EI_EXPOSE_REP2" />
+		<Class name="tacos.Order" />
+	</Match>
+	<!-- Spring owns and safely shares the injected JdbcTemplate collaborator. -->
+	<Match>
+		<Bug pattern="EI_EXPOSE_REP2" />
+		<Class name="tacos.data.JdbcIngredientRepository" />
+	</Match>
+	<Match>
+		<Bug pattern="EI_EXPOSE_REP2" />
+		<Class name="tacos.data.JdbcTacoRepository" />
+	</Match>
+</FindBugsFilter>

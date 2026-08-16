@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Chateau85 Taco Cloud</title>
 <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
@@ -27,7 +27,7 @@
 
 		<h3>Deliver my taco masterpieces to...</h3>
 
-		<label for=" deliveryName">Name: </label> <input type="text"
+		<label for="deliveryName">Name: </label> <input type="text"
 			th:field="*{deliveryName}" /> <span class="validationError"
 			th:if="${#fields.hasErrors('deliveryName')}"
 			th:errors="*{deliveryName}">Name Error</span> <br /> <label
